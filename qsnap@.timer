@@ -1,0 +1,9 @@
+[Unit]
+Description=qsnap BtrFS snapshot tool
+
+[Timer]
+OnCalendar=daily
+Persistent=yes
+
+[Install]
+WantedBy=multi-user.target
