@@ -5,7 +5,7 @@ Description=qsnap BtrFS snapshot tool
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/mksnap.sh "%I"
+ExecStart=/usr/local/bin/qsnap "%I"
 
 [Install]
 WantedBy=multi-user.target

@@ -3,8 +3,8 @@
 understand.
 
 ## Install
-Put `mksnap.sh` in `/usr/local/bin`, the systemd unit files in
-`/etc/systemd/system` and `qsnap.conf` in `/etc`.
+Put `qsnap` in `/usr/local/bin`, the systemd unit files in `/etc/systemd/system`
+and `qsnap.conf` in `/etc`.
 
 ## Configuration
 Edit `/etc/qsnap.conf` and change `$ROOT` accordingly (defaults to `/mnt/root`).
