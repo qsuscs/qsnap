@@ -1,4 +1,5 @@
 = qsnap—qsuscs’ BtrFS snapshot tool
+
 `qsnap` is a simple snapshot tool for BtrFS.  It assumes that all subvolumes are
 present in a certain directory (default `/mnt/root`, which is in fact my BtrFS
 root (subvol 5)) and places snapshots next to them in a directory called
