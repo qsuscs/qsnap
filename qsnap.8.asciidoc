@@ -37,8 +37,8 @@ ROOT="/mnt/root"
 == SEE ALSO
 'btrfs-subvolume(8)'
 
-== AUTHOR AND LICENSE
-'qsnap' was written by Thomas Schneider and is licensed under the ISC license.
+== LICENSE
+'qsnap' is licensed under the ISC license.
 
 == RESOURCES, BUGS, CONTRIBUTING
 Bugs and Pull Requests to https://github.com/qsuscs/qsnap
