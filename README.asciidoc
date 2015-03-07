@@ -13,8 +13,11 @@ time of the snapshot, e.g. `home.snapshots/2015/03/07/2015-03-07T17:09+0100`.
 `systemctl enable qsnap@${subvolume_name}.timer`.
 
 == Install
-Put `qsnap` in `/usr/local/bin`, the systemd unit files in `/etc/systemd/system`
-and `qsnap.conf` in `/etc`.
+----
+# make install
+----
+You can specify a prefix and a destination directory (for
+distributors/packagers): `make prefix=/usr DESTDIR=/tmp/package/image`.
 
 == Configuration
 Edit `/etc/qsnap.conf` and change `$ROOT` accordingly (defaults to `/mnt/root`).
