@@ -1,3 +1,5 @@
+# This file is part of qsnap <https://github.com/qsuscs/qsnap> and distributed
+# under the terms of the ISC license.
 [Unit]
 Description=qsnap BtrFS snapshot tool
 
