@@ -10,8 +10,9 @@ SVN="$1"
 
 TIMEY=$(date -d@"${TIMEU}" +%Y)
 TIMEM=$(date -d@"${TIMEU}" +%m)
+TIMED=$(date -d@"${TIMEU}" +%d)
 TIMES=$(date -d@"${TIMEU}" -Im)
 
 cd "${ROOT}"
-mkdir -p "${SVN}.snapshots/${TIMEY}/${TIMEM}"
-btrfs subvolume snapshot "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMES}"
+mkdir -p "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}"
+btrfs subvolume snapshot "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}/${TIMES}"
