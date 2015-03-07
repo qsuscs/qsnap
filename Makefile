@@ -1,7 +1,7 @@
-all: qsnap.8.html qsnap.8
+doc: qsnap.8.html qsnap.8 README.html
 
-%.8: qsnap.8.asciidoc
+%.8: %.8.asciidoc
 	a2x -f manpage $<
 
-%.html: qsnap.8.asciidoc
+%.html: %.asciidoc
 	asciidoc $<
