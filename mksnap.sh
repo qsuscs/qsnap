@@ -5,7 +5,8 @@
 #
 
 TIMEU=$(date +%s)
-ROOT=/mnt/root
+[ -f /etc/qsnap.conf ] && . /etc/qsnap.conf
+[ -z "${ROOT}" ] && ROOT=/mnt/root
 SVN="$1"
 
 TIMEY=$(date -d@"${TIMEU}" +%Y)
