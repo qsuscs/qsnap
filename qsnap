@@ -4,16 +4,16 @@
 # Distributed under the terms of the ISC license, see LICENSE for details.
 #
 
-TIMEU=$(date +%s)
+time_U="$(date +%s)"
 [ -f /etc/qsnap.conf ] && . /etc/qsnap.conf
 : ${QSNAP_ROOT:=/mnt/root}
-SVN="$1"
+QSNAP_SVN="$1"
 
-TIMEY=$(date -d@"${TIMEU}" +%Y)
-TIMEM=$(date -d@"${TIMEU}" +%m)
-TIMED=$(date -d@"${TIMEU}" +%d)
-TIMES=$(date -d@"${TIMEU}" -Im)
+time_Y="$(date -d@"${time_U}" +%Y)"
+time_M="$(date -d@"${time_U}" +%m)"
+time_D="$(date -d@"${time_U}" +%d)"
+time_S="$(date -d@"${time_U}" -Im)"
 
 cd "${QSNAP_ROOT}"
-mkdir -p "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}"
-btrfs subvolume snapshot "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}/${TIMES}"
+mkdir -p "${QSNAP_SVN}.snapshots/${time_Y}/${time_M}/${time_D}"
+btrfs subvolume snapshot "${QSNAP_SVN}" "${QSNAP_SVN}.snapshots/${time_Y}/${time_M}/${time_D}/${time_S}"
