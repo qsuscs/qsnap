@@ -29,4 +29,15 @@ install: all
 clean:
 	-rm -rf $(docs) qsnap@.service
 
+uninstall:
+	rm "$(DESTDIR)/$(prefix)/bin/qsnap"
+	rm "$(DESTDIR)/$(prefix)/lib/systemd/system/qsnap@.timer"
+	rm "$(DESTDIR)/$(prefix)/lib/systemd/system/qsnap@.service"
+	rm "$(DESTDIR)/etc/qsnap.conf"
+	rm "$(DESTDIR)/$(prefix)/share/doc/qsnap/LICENSE"
+	rm "$(DESTDIR)/$(prefix)/share/doc/qsnap/README.asciidoc"
+	rm "$(DESTDIR)/$(prefix)/share/doc/qsnap/README.html"
+	rm "$(DESTDIR)/$(prefix)/share/doc/qsnap/qsnap.8.html"
+	rm "$(DESTDIR)/$(prefix)/share/man/man8/qsnap.8"
+
 .PHONY: clean install
