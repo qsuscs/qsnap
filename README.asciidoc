@@ -20,7 +20,8 @@ You can specify a prefix and a destination directory (for
 distributors/packagers): `make prefix=/usr DESTDIR=/tmp/package/image`.
 
 == Configuration
-Edit `/etc/qsnap.conf` and change `$ROOT` accordingly (defaults to `/mnt/root`).
+Edit `/etc/qsnap.conf` and change `$QSNAP_ROOT` accordingly
+(defaults to `/mnt/root`).
 To change the time a snapshot is automatically created, create a file ending in
 `.conf` in `/etc/systemd/system/qsnap@.timer.d` (or
 `qsnap@${subvolume_name}.timer.d` to limit to a certain subvolume) with a

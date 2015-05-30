@@ -6,7 +6,7 @@
 
 TIMEU=$(date +%s)
 [ -f /etc/qsnap.conf ] && . /etc/qsnap.conf
-: ${ROOT:=/mnt/root}
+: ${QSNAP_ROOT:=/mnt/root}
 SVN="$1"
 
 TIMEY=$(date -d@"${TIMEU}" +%Y)
@@ -14,6 +14,6 @@ TIMEM=$(date -d@"${TIMEU}" +%m)
 TIMED=$(date -d@"${TIMEU}" +%d)
 TIMES=$(date -d@"${TIMEU}" -Im)
 
-cd "${ROOT}"
+cd "${QSNAP_ROOT}"
 mkdir -p "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}"
 btrfs subvolume snapshot "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}/${TIMES}"
