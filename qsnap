@@ -16,4 +16,4 @@ TIMES=$(date -d@"${TIMEU}" -Im)
 
 cd "${ROOT}"
 mkdir -p "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}"
-btrfs subvolume snapshot "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}/${TIMES}"
+btrfs subvolume snapshot -r "${SVN}" "${SVN}.snapshots/${TIMEY}/${TIMEM}/${TIMED}/${TIMES}"
